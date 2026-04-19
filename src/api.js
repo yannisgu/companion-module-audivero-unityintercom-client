@@ -324,12 +324,20 @@ module.exports = {
 		self.setVariableValues(variableObj)
 	},
 
+	COLOR_NAMES: ['red', 'blue', 'green', 'purple', 'pink', 'brown'],
+
 	setColor: function (color, buttonNumber, value) {
 		let self = this
 
 		for (let i = 0; i < self.keyStates.length; i++) {
 			if (self.keyStates[i].buttonNumber === buttonNumber) {
 				self.keyStates[i][color] = value
+
+				// Publish active colors as a variable
+				let active = self.COLOR_NAMES.filter((c) => self.keyStates[i][c] === true)
+				let variableObj = {}
+				variableObj['button_' + (buttonNumber + 1) + '_color'] = active.join('+')
+				self.setVariableValues(variableObj)
 				break
 			}
 		}
