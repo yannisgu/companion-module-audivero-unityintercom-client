@@ -8,9 +8,7 @@ module.exports = {
 
 		const foregroundColor = combineRgb(255, 255, 255) // White
 		const foregroundColorBlack = combineRgb(0, 0, 0) // Black
-		const backgroundColorRed = combineRgb(255, 0, 0) // Red
-		const backgroundColorBlue = combineRgb(0, 0, 255) // Blue
-		const backgroundColorGreen = combineRgb(0, 255, 0) // Red
+		const backgroundColorGreen = combineRgb(0, 255, 0) // Green
 
 		for (let i = 0; i < self.API_BUTTONS; i++) {
 			presets.push({
@@ -45,69 +43,9 @@ module.exports = {
 				],
 				feedbacks: [
 					{
-						feedbackId: 'color',
+						feedbackId: 'multiColor',
 						options: {
 							button: i,
-							color: 'red',
-						},
-						style: {
-							color: foregroundColor,
-							bgcolor: backgroundColorRed,
-						},
-					},
-					{
-						feedbackId: 'color',
-						options: {
-							button: i,
-							color: 'blue',
-						},
-						style: {
-							color: foregroundColor,
-							bgcolor: backgroundColorBlue,
-						},
-					},
-					{
-						feedbackId: 'color',
-						options: {
-							button: i,
-							color: 'green',
-						},
-						style: {
-							color: foregroundColor,
-							bgcolor: backgroundColorGreen,
-						},
-					},
-					{
-						feedbackId: 'color',
-						options: {
-							button: i,
-							color: 'purple',
-						},
-						style: {
-							color: foregroundColor,
-							bgcolor: combineRgb(128, 0, 128), // Purple
-						},
-					},
-					{
-						feedbackId: 'color',
-						options: {
-							button: i,
-							color: 'pink',
-						},
-						style: {
-							color: foregroundColor,
-							bgcolor: combineRgb(255, 192, 203), // Pink
-						},
-					},
-					{
-						feedbackId: 'color',
-						options: {
-							button: i,
-							color: 'brown',
-						},
-						style: {
-							color: foregroundColor,
-							bgcolor: combineRgb(165, 42, 42), // Brown
 						},
 					},
 				],
